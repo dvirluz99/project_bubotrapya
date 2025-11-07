@@ -1,0 +1,528 @@
+/* ===== תיקון גלילה ורווחים ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* מונע גלילה לרוחב */
+    background: #fdfdfd;
+}
+/* 
+html {
+    height: 100%;
+} */
+
+.header_link{
+    display: none;
+    border-radius: 10px;
+}
+
+
+/* body {
+    height: 100%;
+    margin: 0;
+    font-family: "Heebo", Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    direction: rtl;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+} */
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Heebo", Arial, sans-serif;
+    /* צבע הרקע הישן שלך. ראה סעיף 3 להצעות חדשות */
+    background: #fdfdfd; 
+    color: #333;
+    direction: rtl;
+
+    /* ---- התיקון והשיפור ---- */
+    display: grid;
+    /* נגדיר מראש מבנה של עמודה אחת, זה הכל */
+    grid-template-columns: 1fr; 
+    /* הגדרת שורות: כותרת, ניווט, תוכן עיקרי (שגדל), פוטר */
+    grid-template-rows: auto auto 1fr auto;
+    /* נשייך את האלמנטים לאזורים (לא חובה אבל שומר על הסדר) */
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    /* חשוב: נוודא שהגובה המינימלי הוא 100% מגובה המסך */
+    min-height: 100vh; 
+}
+
+
+/* ---- כותרת עליונה ---- */
+header {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    grid-area: header;
+}
+
+.continer_header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img_item_header {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.item_butoon_header {
+    background: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item_butoon_header:hover {
+    background: #ff9933;
+    color: white;
+}
+
+/* ---- טקסט עליון (תיאור האתר) ---- */
+nav {
+    background: #fff8e7;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    grid-area: nav;
+}
+
+/* ---- החלק המרכזי (כרטיסיות להצגות) ---- */
+main {
+    grid-area: main;
+    background-color: #dcf8dc;
+}
+
+.continer_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    border-bottom: #838181 solid 1px;
+    
+}
+
+footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, #ffb347, #ffcc33);   
+}
+
+footer div{
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.div_card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.div_presentation{
+    display: grid;
+    place-items: center;
+    gap: 15px;
+    /* justify-content: space-between; */
+    font-size: 20px;
+}
+
+.p_presentation {
+    width: 60%;
+    background-color: #fff8e7;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+figure {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+figure img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #fffbf3;
+}
+
+
+.item_hover {
+    display: none;
+    position: absolute; /* מיקום יחסי לכרטיסייה */
+    top: -90%; /* מעל הכרטיסייה */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 20; /* מעל הכרטיסייה */
+    width: 90%; /* התאמה לגודל הכרטיסייה */
+    text-align: center;
+}
+
+/* הצגת ה-item_hover כאשר העכבר נמצא מעל item_main */
+.item_main:hover .item_hover {
+    display: block;
+}
+
+/* התאמה של item_main כדי למנוע חפיפה */
+.div_card {
+    position: relative; /* כדי שה-item_hover ימוקם ביחס אליו */
+}
+
+.vidue_iframe {
+    width: 560px;
+    height: 350px;
+}
+
+.item_hover_figcaption {
+    font-size: 11px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* יצירת עמודות אוטומטיות שמתאימות את עצמן. 
+        כל עמודה תהיה לפחות 200 פיקסלים, והן יתחלקו שווה בשווה */
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    place-items: center;
+    gap: 15px; /* רווח בין התמונות */
+    padding: 15px; /* ריפוד מסביב לכל הגלריה */
+}
+
+.gallery-grid a {
+    display: block; /* גורם לקישור להתנהג כמו בלוק */
+    height: 80%;
+    width: 80%;
+    border-radius: 8px; /* פינות מעוגלות */
+    overflow: hidden; /* מסתיר חלקים שגולשים מהפינות המעוגלות */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* אפקט צל יפה */
+    transition: transform 0.2s ease-in-out; /* אנימציה קטנה בהעברת עכבר */
+}
+
+.gallery-grid a:hover {
+    transform: scale(1.03); /* מגדיל מעט את התמונה בהעברת עכבר */
+}
+
+.gallery-grid img {
+    width: 100%; /* התמונה תתפוס 100% מרוחב הקישור */
+    height: 100%;
+    object-fit: cover; /* יגרום לתמונה למלא את השטח בלי להתעוות */
+    display: block; /* מסיר רווח מיותר מתחת לתמונה */
+}
+
+
+/* ============================ */
+/* ===== עיצוב למובייל ===== */
+/* ============================ */
+@media (max-width: 768px) {
+
+    /* --- מבנה כללי --- */
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    .continer_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .img_item_header {
+        height: 45px;
+        width: 45px;
+    }
+
+    .item_butoon_header {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* --- ניווט (Nav) --- */
+    nav {
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    /* --- אזור ראשי (Main) --- */
+    main {
+        background-color: #dcf8dc;
+        padding: 1rem 0.5rem;
+    }
+
+    .continer_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    figure {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    figure img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    figcaption {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .div_trailer {
+        margin: 10px 0 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* --- תיאור (Presentation) --- */
+    .div_presentation {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .p_presentation {
+        width: 95%;
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .vidue_iframe {
+        width: 100%;
+        height: 200px;
+
+    }
+
+    /* --- גלריה --- */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .gallery-grid a {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-grid img {
+        height: 100px;
+        object-fit: cover;
+    }
+
+    /* --- פוטר (Footer) --- */
+    footer {
+        padding: 1rem 0;
+    }
+
+    footer div {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+}
+
+/* זה מחליף את הכלל .p_presentation הישן שלך.
+   זהו ה"כרטיס" הראשי שמכיל את כל פרטי ההצגה.
+*/
+.show-details-container {
+    width: 90%; /* מתאים למובייל (מהתיקון הקודם) */
+    max-width: 800px; /* אבל בדסקטופ, שלא יהיה רחב מדי */
+    margin: 2rem auto; /* מרכוז אוטומטי (למעלה-למטה וצדדים) */
+    padding: 2rem 2.5rem;
+    background-color: #fff8e7; /* צבע הקרם שלך */
+    border-radius: 15px; /* פינות עגולות יותר */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* הצללה מודרנית */
+    border: 1px solid #ffeccc; /* מסגרת עדינה */
+}
+
+/* --- 1. הכותרת --- */
+.show-title {
+    text-align: center;
+    font-size: 2.5rem; /* גופן גדול ובולט */
+    font-weight: 800; /* מודגש מאוד */
+    color: #ff9933; /* הצבע הכתום מהכותרת שלך */
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* --- 2. התיאור --- */
+.show-description {
+    text-align: center;
+    font-size: 1.15rem; /* מעט יותר גדול מטקסט רגיל */
+    line-height: 1.7; /* מרווח שורות נוח לקריאה */
+    color: #444; /* צבע כהה וברור */
+    margin-bottom: 2rem;
+}
+
+/* --- 3. פרטי היוצרת (קופסה פנימית) --- */
+.creator-bio {
+    background: rgba(255, 255, 255, 0.7); /* רקע לבן חצי-שקוף */
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 1px solid #fff; /* מסגרת לבנה עדינה */
+}
+
+.creator-intro {
+    font-size: 1rem;
+    margin: 0;
+    color: #555;
+}
+.creator-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0.25rem 0;
+}
+.creator-credentials {
+    font-size: 0.9rem;
+    font-style: italic; /* כתב נטוי */
+    color: #666;
+    margin: 0;
+}
+
+/* --- 4. קהל יעד --- */
+.audience-highlight {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700; /* מודגש */
+    color: #333;
+    background: #ffcc33; /* רקע כתום-צהוב מהפלטה שלך */
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* --- 5. כפתור קריאה לפעולה (CTA) --- */
+.cta-container {
+    text-align: center; /* מרכוז הכפתור */
+    margin-bottom: 2.5rem;
+}
+
+.cta-button {
+    display: inline-block; /* מאפשר padding ו-margin */
+    background: linear-gradient(135deg, #ff9933, #ffb347); /* גרדיאנט כתום */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none; /* הסרת קו תחתון */
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px; /* כפתור "גלולה" */
+    box-shadow: 0 4px 10px rgba(255, 153, 51, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px); /* אפקט ריחוף קטן */
+    box-shadow: 0 6px 15px rgba(255, 153, 51, 0.5);
+}
+
+/* --- 6. הוכחה חברתית --- */
+.social-proof {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px dashed #ffcc33; /* קו מקווקו עדין להפרדה */
+    padding-top: 1.5rem;
+}
+
+.social-proof h4 {
+    margin: 0 0 0.5rem 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.social-proof p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* התאמה נוספת למובייל */
+@media (max-width: 768px) {
+    .show-details-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .show-title {
+        font-size: 2rem; /* כותרת קטנה יותר במובייל */
+    }
+
+    .cta-button {
+        padding: 0.7rem 2rem;
+        font-size: 1.1rem;
+    }
+}

@@ -33,6 +33,11 @@ export class App{
             if(presentationCard){
                 this.#Ui.renderOnePresentation(this.#ClassPresentation.getProductById(event.target.dataset.id));
             }
+
+            const homePage = event.target.closest(`.${ClassesName.HOME_PAGE}`);
+            if(homePage){
+                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+            }
         })
     }
 }

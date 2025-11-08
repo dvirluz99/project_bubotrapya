@@ -9,6 +9,8 @@ export class ClassesName{
                     static IFRAME_VIDUE = "vidue_iframe";
                     static SHOW_DETAILS_CONTAINER = "show-details-container";
                     static HOME_PAGE = "home_page";
+                    static ABOUT = "about";
+                    static CONTACT_US = "contact_us";
 }
 
 export class State{

@@ -1,4 +1,4 @@
-// import { CardPresentation } from "./CardPresentation.js";
+
 import { Presentations } from "./ClassPresentation.js";
 import { Ui } from "./Ui.js";
 import { ClassesName } from "./Constans.js";
@@ -7,14 +7,13 @@ import { ClassesName } from "./Constans.js";
 export class App{
 
     #Ui;
-    #cardPresentation;
+    
     #ClassPresentation;
     constructor(){
         this.#Ui = new Ui();
         this.#ClassPresentation = new Presentations();
         this.allEvents();
-        // this.#cardPresentation = new CardPresentation();
-
+        
     }
 
     init(){
@@ -37,6 +36,16 @@ export class App{
             const homePage = event.target.closest(`.${ClassesName.HOME_PAGE}`);
             if(homePage){
                 this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+            }
+
+            const about = event.target.closest(`.${ClassesName.ABOUT}`);
+            if(about){
+
+            }
+
+            const contactUs = event.target.closest(`.${ClassesName.CONTACT_US}`);
+            if(contactUs){
+                this.#Ui.renderPageContactUs();
             }
         })
     }

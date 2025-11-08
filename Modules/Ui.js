@@ -59,10 +59,6 @@ export class Ui{
         divTrailer.className = ClassesName.DIV_TRAILER;
         divTrailer.innerHTML = presentation.vidue.Trailer;
 
-        // const p = document.createElement("p");
-        // p.className = ClassesName.P_PRESENTATION;
-        // p.textContent = presentation.Description;
-
         const divShowData = this.#creatDivShowData(presentation);
 
         const divGalery = this.#creatGaleryForPresentation(presentation.arrayGallery);
@@ -119,5 +115,43 @@ export class Ui{
             divGallery.appendChild(a);
         })
         return divGallery;
+    }
+
+    //יצירת דף אודות
+    renderPageAbout(){
+        const div = document.createElement("div");
+
+    }
+
+    //יצירת דף יצירת קשר
+    renderPageContactUs(){
+        this.#mainContiner.innerHTML = `<div class="contact-page-container">
+            <h2>יצירת קשר</h2>
+            <p>אני כאן לכל שאלה, בקשה או הזמנה.
+               <br>
+               אפשר לבחור את הדרך הנוחה לך:
+            </p>
+
+            <div class="contact-options-grid">
+
+                <a href="https://wa.me/972542043429" class="contact-card whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>שליחת הודעה בוואטסאפ</h3>
+                    <p>לשיחה מהירה ונוחה</p>
+                </a>
+
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ronitluz@gmail.com" target="_blank" class="contact-card email">
+                    <i class="far fa-envelope"></i>
+                    <h3>שליחת אימייל</h3>
+                    <p>לפניות מפורטות או רשמיות</p>
+                </a>
+
+                <a href="https://facebook.com/your-page" class="contact-card facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <h3>עמוד הפייסבוק</h3>
+                    <p>להישאר מעודכנים ולצפות בתמונות</p>
+                </a>
+
+            </div> </div>`;
     }
 }

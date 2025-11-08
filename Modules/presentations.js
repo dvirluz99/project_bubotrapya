@@ -39,18 +39,6 @@ export const arrayPresentations = [
                                     phone: "0542043429",
                                     socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
                                     },
-                                Description: `חוהלה – משואה לתקומה  
-                                סיפורה  האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שכל משפחתו נרצחה בשואה.  
-                                זהו סיפור של הצלה, אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת  מרגשת.
-
-                                ההצגה מועברת ע"י נכדתם,  
-                                רונית לוז – יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.
-                                מתאים לנשים ונערות בכל גיל!
-
-                                להזמנות  והמלצות:0542043429
-
-                                ההצגה הועברה במועדון עמך לניצולי שואה, לנשים בגיל השלישי , לנערות בתיכונים ולילדים החל מכיתה ד'
-                                `,
                                 vidue: {
                                     Trailer: `<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/7bcTavMpMZM?si=Hu5PlHwgkJYKzE7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
                                 },
@@ -71,7 +59,7 @@ export const arrayPresentations = [
                                 name: "הצגות והרצאות לבני נוער - לילה לבן",
                                 id: "p3",
                                 mainImg: "AllDir/הצגות והרצאות לבני נוער/potho_for_gift.jpg",
-                                Description: "",
+                                showData: {},
                                 arrayGalery: [
                                             
                                 ],

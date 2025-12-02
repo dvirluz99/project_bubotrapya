@@ -4,16 +4,19 @@ import { ClassesName, State } from "./Constans.js";
 export class Ui{
     #mainContiner;
     constructor(){
-        this.#mainContiner = document.querySelector(`.${ClassesName.CONTINER_MAIN}`);
+        this.#mainContiner = document.querySelector(`.${ClassesName.CONTINER_MAIN_FOR_HOME}`);
     }
 
     // יצירת כל המצגות על המסך הראשי
     renderAllPresentation(AllPresentation){
         this.#mainContiner.innerHTML = "";
+        const div = document.createElement('div');
+        div.className = ClassesName.CONTINER_MAIN_FOR_ALL;
         AllPresentation.forEach(element => {
             const divPresentation = this.#creaCardForAllPresentation(element);
-            this.#mainContiner.appendChild(divPresentation);
+            div.appendChild(divPresentation);
         });
+        this.#mainContiner.appendChild(div);
 
     }
 
@@ -30,6 +33,7 @@ export class Ui{
         
         const img = document.createElement("img");
         img.src = element.mainImg;
+        img.className = ClassesName.IMG_FOR_CARD;
         img.setAttribute("data-id", element.id);
 
         const figcaption = document.createElement("figcaption");
@@ -45,31 +49,54 @@ export class Ui{
     }
 
     // יצירת האלמנטים של מצגת אחת
-    renderOnePresentation(presentation){
+renderOnePresentation(presentation) {
+    // 1. ניקוי והכנה
+    this.#mainContiner.innerHTML = "";
+    // this.#renderClassesNameMain("cart"); // אני מניח שזה משנה את ה-CSS של הקונטיינר
+    
+    // 2. יצירת המעטפת הראשית
+    const divMain = document.createElement("div");
+    divMain.className = ClassesName.DIV_PRESENTATION;
 
-        this.#mainContiner.innerHTML = "";
+    // 3. כותרת
+    const h2 = document.createElement("h2");
+    h2.textContent = presentation.name;
+    divMain.appendChild(h2);
 
-        const divMain = document.createElement("div");
-        divMain.className = ClassesName.DIV_PRESENTATION;
-
-        const h2 = document.createElement("h2");
-        h2.textContent = presentation.name;
-
+    // 4. טיפול בטריילרים (בצורה חכמה ובטוחה)
+    // בודקים: האם קיים אובייקט vidue? והאם בתוכו יש Trailer?
+    if (presentation.vidue && presentation.vidue.Trailer) {
         const divTrailer = document.createElement("div");
         divTrailer.className = ClassesName.DIV_TRAILER;
-        divTrailer.innerHTML = presentation.vidue.Trailer;
 
-        const divShowData = this.#creatDivShowData(presentation);
-
-        const divGalery = this.#creatGaleryForPresentation(presentation.arrayGallery);
-
-        divMain.appendChild(h2);
+        // בדיקה: אם זה מערך - מחברים. אם זו מחרוזת - משתמשים בה כמו שהיא.
+        // זה פותר לך את הבאג הנוכחי בלי לשנות את כל הנתונים אם אתה מתעצל
+        const trailerContent = Array.isArray(presentation.vidue.Trailer) 
+                               ? presentation.vidue.Trailer.join(" ") 
+                               : presentation.vidue.Trailer;
+        
+        divTrailer.innerHTML = trailerContent;
         divMain.appendChild(divTrailer);
-        divMain.appendChild(divShowData);
-        divMain.appendChild(divGalery);
-
-        this.#mainContiner.appendChild(divMain);
     }
+
+    // 5. נתונים טקסטואליים
+    if (presentation.showData) {
+        const divShowData = this.#creatDivShowData(presentation);
+        divMain.appendChild(divShowData);
+    }
+
+    // 6. גלריה (רק אם יש תמונות)
+    if (presentation.arrayGallery && presentation.arrayGallery.length > 0) {
+        const divGalery = this.#creatGaleryForPresentation(presentation.arrayGallery);
+        divMain.appendChild(divGalery);
+    }
+
+    // 7. הוספה לדף
+    this.#mainContiner.appendChild(divMain);
+    
+    // גלילה למעלה (חווית משתמש חשובה במעבר בין דפים)
+    window.scrollTo(0, 0);
+}
 
     
     // ואז ב-JavaScript אתה בונה את ה-HTML דינמית:
@@ -140,7 +167,7 @@ export class Ui{
                     <p>לשיחה מהירה ונוחה</p>
                 </a>
 
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ronitluz@gmail.com" target="_blank" class="contact-card email">
+                <a href="mailto:ronitluz@gmail.com" target="_blank" class="contact-card email">
                     <i class="far fa-envelope"></i>
                     <h3>שליחת אימייל</h3>
                     <p>לפניות מפורטות או רשמיות</p>

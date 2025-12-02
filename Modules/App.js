@@ -1,7 +1,7 @@
 
 import { Presentations } from "./ClassPresentation.js";
 import { Ui } from "./Ui.js";
-import { ClassesName } from "./Constans.js";
+import { ClassesName, Route } from "./Constans.js";
 
 
 export class App{
@@ -17,7 +17,15 @@ export class App{
     }
 
     init(){
-        this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+        const hash = window.location.hash;
+        switch (hash) {
+            case Route.home:
+                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+                break;
+            default:
+                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+                break;
+        }
         Fancybox.bind('[data-fancybox="gallery1"]', {
             // כאן אפשר להוסיף אפשרויות מותאמות אישית אם נרצה בעתיד
         });

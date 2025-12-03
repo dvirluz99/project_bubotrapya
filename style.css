@@ -202,6 +202,10 @@ figcaption {
     position: relative; /* כדי שה-item_hover ימוקם ביחס אליו */
 }
 
+.div_trailer {
+        margin: 10px 0 10px 0;
+}
+
 .vidue_iframe {
     width: 450px;
     height: 300px;
@@ -324,7 +328,8 @@ figcaption {
     .div_trailer {
         margin: 10px 0 10px 0;
         display: flex;
-        justify-content: center;
+        flex-direction: column; /* סידור האלמנטים אחד מתחת לשני (עמודה) */
+        gap: 30px;             /* הוספת רווח של 30 פיקסלים בין הסרטונים */
         align-items: center;
     }
 
@@ -345,6 +350,7 @@ figcaption {
 
     .vidue_iframe {
         width: 100%;
+        max-width: 800px;
         height: 200px;
 
     }

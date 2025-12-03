@@ -225,7 +225,7 @@ export const homePageStructure = [
         id: "card_7",
         type: "collection",
         title: "סדנאות בובהתרפיה לגננות ולצוותי גיל הרך", // כותרת לכריסייה
-        mainImg: "AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל ברך/logo_gor_gananot_gil_arach.jpg", // תמונה ראשית לאוסף
+        mainImg: "AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/logo_gor_gananot_gil_arach.jpg", // תמונה ראשית לאוסף
         description: "אוסף סדנאות המשלבות את ההצגות המובחרות שלנו",
         
         // כאן הקסם: הרשימה מכילה IDs של הצגות שקיימות במאגר
@@ -263,7 +263,7 @@ export const showData = {
             socialProof: "ההצגה הועברה  בכמה מוסדות חינוך '"
         },
         vidue: {
-            Trailer: [`<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/7bcTavMpMZM?si=Hu5PlHwgkJYKzE7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`],
+            Trailer: [],
         },
         arrayGallery: [
                     {img:"AllDir/את אחי אנכי מבקש/image1.jpg"},
@@ -322,7 +322,7 @@ export const showData = {
             socialProof: "ההצגה הועברה להורים רבים"
             },
         vidue:{
-            Trailer:[`<iframe width="560" height="315" src="https://www.youtube.com/embed/97jA2ir7Uu0?si=iAIGNEGyzw2-YC6z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+            Trailer:[`<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/97jA2ir7Uu0?si=iAIGNEGyzw2-YC6z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
 
             ]
             },
@@ -412,7 +412,7 @@ export const showData = {
         title: 'עולה חדשה',
         id: 'p8',
         type: 'single',
-        mainImg: 'AllDir/הצגות לילדים/לקראת ימי התשובה/logo_for_likrat_yema.jpg',
+        mainImg: 'AllDir/הצגות לילדים/עולה חדשה/logo_ola_chadasha.jpg',
         showData: {
             title: 'עולה חדשה',
             description: 'ההצגה תלמד את הילדים להסתכל על חברם לגן או לכיתה בעין חיובית ויפה, להתמודד עם אכזבה וכמה חשוב לשתף את ההורים בכל דברת ההצגה מספרת את סיפורה של אילנה עולה חדשה בכיתה א',
@@ -430,7 +430,7 @@ export const showData = {
         title: 'קמצא ובר קמצא',
         id: 'p9',
         type: 'single',
-        mainImg: 'AllDir/הצגות לילדים/לקראת ימי התשובה/logo_for_likrat_yema.jpg',
+        mainImg: 'AllDir/הצגות לילדים/קמצא ובר קמצא/logo_kamza.jpg',
         showData: {
             title: 'קמצא ובר קמצא',
             description: 'ההצגה מבוססת על אגדת חז"ל "קמצא ובר קמצא", בהצגה נדגים את הסיפור על ידי בובות, הילדים יקבלו מחווית הסיפור כהמ קשה שנאת חינם, ולעומת זאת כמה יפה וטובה אהבת חינם',
@@ -506,18 +506,26 @@ export const showData = {
         title: 'השתלמות חוויתית ופרקטית לגננות ומורות',
         id: 'p13',
         type: 'single',
-        mainImg: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל ברך/logo_gor_gananot_gil_arach.jpg',
+        mainImg: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/logo_gor_gananot_gil_arach.jpg',
         showData: {
             title: 'השתלמות חוויתית ופרקטית לגננות ומורות',
             description: 'מחכה לנו מודל עבודה עם בובות לחיזוק החוסן הרגשי, סדנא ליצירת בובות חוסן כלי מעשי ומיידי, שילוב סיפורים ואגדות חז"ל',
             creatorIntro: 'ההצגה מועברת ע"י,',
             creatorName: "רונית לוז",
             creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-            audience: "מיועד לבני משפחה מטפלים ואנשי טיפול סעודי",
+            audience: "מיועד לגננות ומורות",
             phone: "0542043429",
             socialProof: "הסדנא הועברה לגננות וצוותים"
             },
-        vidue:{Trailer:[]},
-        arrayGallery: [],
+        vidue:{Trailer:['<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/IROu-a1RGFg?si=P0Dg6PrmYkqX9Xet" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+
+        ]},
+        arrayGallery: [
+            {img: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/imge1.jpg'},
+            {img: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/imge2.jpg'},
+            {img: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/imge3.jpg'},
+            {img: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/imge4.jpg'},
+            {img: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/imge5.jpg'},
+        ],
         },
 }

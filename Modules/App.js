@@ -20,10 +20,10 @@ export class App{
         const hash = window.location.hash;
         switch (hash) {
             case Route.home:
-                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
                 break;
             default:
-                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
                 break;
         }
         Fancybox.bind('[data-fancybox="gallery1"]', {
@@ -36,14 +36,20 @@ export class App{
     allEvents(){
         document.body.addEventListener("click", (event) => {
 
-            const presentationCard = event.target.closest(`.${ClassesName.DIV_CARD}`);
-            if(presentationCard){
-                this.#Ui.renderOnePresentation(this.#ClassPresentation.getProductById(event.target.dataset.id));
+            const card = event.target.closest(`.${ClassesName.DIV_CARD}`);
+            if(card){
+                const elmentCard = this.#ClassPresentation.getProductById(event.target.dataset.id)
+                if(elmentCard.type === 'single'){
+                    this.#Ui.renderOnePresentation(this.#ClassPresentation.getProductById(event.target.dataset.linkedShowId || event.target.dataset.id));
+                }else if(elmentCard.type === 'collection'){
+                    this.#Ui.renderAllPresentation(this.#ClassPresentation.getColcationfromCard(event.target.dataset.id))
+                }
+                
             }
 
             const homePage = event.target.closest(`.${ClassesName.HOME_PAGE}`);
             if(homePage){
-                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProducts());
+                this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
             }
 
             const about = event.target.closest(`.${ClassesName.ABOUT}`);

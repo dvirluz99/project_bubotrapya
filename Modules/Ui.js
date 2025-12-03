@@ -23,22 +23,28 @@ export class Ui{
     
     // יצירת כרטיס מצגת אחת לצורך הלוח הראשי
     #creaCardForAllPresentation(element){
+        let dataId;
+        if(element.type === 'single' && element.linkedShowId){
+            dataId = element.linkedShowId;
+        }else{
+            dataId = element.id;
+        }
 
         const div = document.createElement("div");
         div.className = ClassesName.DIV_CARD;
-        div.setAttribute("data-id", element.id);
+        div.setAttribute("data-id", dataId);
 
         const figure = document.createElement("figure");
-        figure.setAttribute("data-id", element.id);
+        figure.setAttribute("data-id", dataId);
         
         const img = document.createElement("img");
         img.src = element.mainImg;
         img.className = ClassesName.IMG_FOR_CARD;
-        img.setAttribute("data-id", element.id);
+        img.setAttribute("data-id", dataId);
 
         const figcaption = document.createElement("figcaption");
-        figcaption.textContent = element.name;
-        figcaption.setAttribute("data-id", element.id);
+        figcaption.textContent = element.title;
+        figcaption.setAttribute("data-id", dataId);
 
         figure.appendChild(img);
         figure.appendChild(figcaption);

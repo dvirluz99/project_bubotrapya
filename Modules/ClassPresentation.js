@@ -1,4 +1,4 @@
-import {homePageStructure, showData, recommendationsData} from "./presentations.js";
+import {homePageStructure, showData, recommendationsData, aboutData} from "./presentations.js";
 
 export class Presentations{
   #araayPresentation;
@@ -37,12 +37,18 @@ export class Presentations{
   }
 
   getRecommendationById(id){
+    if(id.startsWith('rec')){
+       return [recommendationsData[id]];
+    }
     const arrRec = [];
-    arrRec.forEach
     showData[id].linkRec.forEach((idRec)=>{
       arrRec.push(recommendationsData[idRec]);
     })
 
     return arrRec; 
     }
+
+  getPageAbout(){
+    return aboutData;
+  }
 }

@@ -48,6 +48,9 @@ export class App{
             this.navigate(id, 'recommendation'); 
             // --------------------
 
+        }else if(path === 'about'){
+            this.navigate( '', 'about')
+
         } else {
             this.navigate(null, 'home');
         }
@@ -66,7 +69,11 @@ export class App{
         const arrData = this.#ClassPresentation.getRecommendationById(id); 
         this.#Ui.renderRecommendationsPage(arrData);
 
-    } else {
+    } else if (type === 'about') {
+        const aboutData = this.#ClassPresentation.getPageAbout();
+        this.#Ui.renderAboutPage(aboutData);
+    }
+        else {
         this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
     }
 }
@@ -75,6 +82,7 @@ export class App{
     // האזנת הפעלת העכבר של המשתמש
     allEvents(){
         document.body.addEventListener("click", (event) => {
+
 
             const card = event.target.closest(`.${ClassesName.DIV_CARD}`);
             if(card){
@@ -103,21 +111,20 @@ export class App{
                 this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
             }
 
-            const recLink = event.target.closest(`.${ClassesName.CTA_BUTTON}`); // נניח שיש כפתור כזה
+            const recLink = event.target.closest(`.${ClassesName.CTA_BUTTON}, .${ClassesName.TESTIMONIAL_MINI_CARD}`); // נניח שיש כפתור כזה
             if (recLink) {
                 const recId = recLink.dataset.id;
                 if(recId){
                     history.pushState({ page: 'recommendation', id: recId }, '', `#recommendation/${recId}`); 
-                // 2. ניווט
                     this.navigate(recId, 'recommendation');
                 }
-                // 1. עדכון ה-URL
                 
             }
 
             const about = event.target.closest(`.${ClassesName.ABOUT}`);
             if(about){
-
+                history.pushState({ page: 'about'}, '', `#about`);
+                this.navigate('', 'about') 
             }
         })
     }

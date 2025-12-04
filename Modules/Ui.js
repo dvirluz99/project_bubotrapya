@@ -267,5 +267,72 @@ renderOnePresentation(presentation) {
     this.#mainContiner.appendChild(wrapper);
 }
 
+renderAboutPage(aboutData) {
+    this.#mainContiner.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "about-page-wrapper";
+
+    // --- חלק עליון: תמונה וטקסט ---
+    const topSection = document.createElement("div");
+    topSection.className = "about-top-section";
+
+    // תמונה (אם יש)
+    if (aboutData.mainImage) {
+        const imgDiv = document.createElement("div");
+        imgDiv.className = "about-image-container";
+        
+        const img = document.createElement("img");
+        img.src = aboutData.mainImage;
+        img.alt = "רונית לוז";
+        
+        imgDiv.appendChild(img);
+        topSection.appendChild(imgDiv);
+    }
+
+    // טקסט ראשי
+    const textDiv = document.createElement("div");
+    textDiv.className = "about-text-content";
+    textDiv.innerHTML = `
+        <h1 class="about-title">${aboutData.title}</h1>
+        <div class="about-description">${aboutData.mainDescription}</div>
+    `;
+    topSection.appendChild(textDiv);
+
+    wrapper.appendChild(topSection);
+
+    // --- חלק תחתון: כרטיסיות ציטוטים ---
+    if (aboutData.testimonials && aboutData.testimonials.length > 0) {
+        const testimonialsSection = document.createElement("div");
+        testimonialsSection.className = "testimonials-section";
+        
+        const sectionTitle = document.createElement("h3");
+        sectionTitle.textContent = "מילים חמות מהשטח";
+        testimonialsSection.appendChild(sectionTitle);
+
+        const grid = document.createElement("div");
+        grid.className = "testimonials-grid";
+
+        aboutData.testimonials.forEach(item => {
+            const card = document.createElement("div");
+            card.dataset.id = item.linkRecId;
+            card.className = "testimonial-mini-card";
+            card.innerHTML = `
+                <div class="quote-icon">❝</div>
+                <p class="testi-text">${item.text}</p>
+                <span class="testi-author">- ${item.author}</span>
+                <span class="testi-from-Pres">${item.fromPresention}</span>
+            `;
+            grid.appendChild(card);
+        });
+
+        testimonialsSection.appendChild(grid);
+        wrapper.appendChild(testimonialsSection);
+    }
+
+    this.#mainContiner.appendChild(wrapper);
+}
+
     
 }

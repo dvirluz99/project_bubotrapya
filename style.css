@@ -847,3 +847,226 @@ figcaption {
         font-size: 1.5rem;
     }
 }
+
+/* ========================================= */
+/* דף קצת עלינו (About Us)       */
+/* ========================================= */
+
+/* --- מעטפת כללית --- */
+.about-page-wrapper {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 20px;
+    font-family: 'Heebo', sans-serif;
+    direction: rtl;
+    color: #333;
+}
+
+/* --- חלק עליון: תמונה וטקסט --- */
+.about-top-section {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start; /* הצמדה למעלה כדי שהטקסט יתחיל בקו ישר עם התמונה */
+    margin-bottom: 5rem;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    /* צל עדין ויוקרתי להבלטת האזור */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05); 
+    border: 1px solid #f0f0f0;
+}
+
+/* --- אזור התמונה --- */
+.about-image-container {
+    flex: 1; /* לוקח שליש */
+    max-width: 380px;
+    position: relative;
+}
+
+.about-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    /* אפקט "תמונה מודפסת" עם מסגרת כפולה */
+    box-shadow: 
+        15px 15px 0px rgba(255, 153, 51, 0.2), /* צל כתום */
+        -10px -10px 0px rgba(240, 240, 240, 0.8); /* צל אפור בהיר */
+    transition: transform 0.4s ease;
+}
+
+.about-image-container img:hover {
+    transform: scale(1.02) rotate(1deg); /* תנועה קטנה וחמודה במעבר עכבר */
+}
+
+/* --- אזור הטקסט --- */
+.about-text-content {
+    flex: 2; /* לוקח שני שליש */
+}
+
+.about-title {
+    color: #e65100; /* כתום עמוק */
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    line-height: 1.2;
+}
+
+/* קו דקורטיבי מתחת לכותרת */
+.about-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 6px;
+    background: linear-gradient(to right, #ff9933, #ffcc80);
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.about-description {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #4a4a4a;
+}
+
+.about-description p {
+    margin-bottom: 1.5rem;
+}
+
+/* הדגשת מילים חשובות בטקסט (אם תרצה להוסיף <strong> ב-HTML) */
+.about-description strong {
+    color: #d35400;
+    font-weight: 600;
+}
+
+/* --- חלק תחתון: כרטיסיות ציטוטים (Testimonials) --- */
+.testimonials-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px dashed #ffe0b2; /* קו הפרדה מקווקו */
+}
+
+.testimonials-section h3 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.testimonials-grid {
+    display: grid;
+    /* גריד חכם: יוצר עמודות באופן אוטומטי, מינימום 260px לכרטיס */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* --- עיצוב כרטיס ציטוט בודד --- */
+.testimonial-mini-card {
+    background: #fff8e1; /* רקע שמנת/צהבהב */
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #ffeec2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* אפקט בריחוף על הכרטיס */
+.testimonial-mini-card:hover {
+    transform: translateY(-8px); /* עולה למעלה */
+    box-shadow: 0 12px 25px rgba(255, 153, 51, 0.15); /* הצללה כתומה זוהרת */
+    background: #ffffff; /* הופך ללבן נקי */
+    border-color: #ffcc80;
+}
+
+/* אייקון המרכאות הגדול */
+.quote-icon {
+    font-size: 3.5rem;
+    color: #ffb74d; /* כתום בהיר */
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-family: serif; /* פונט קלאסי למרכאות */
+    line-height: 1;
+}
+
+.testi-text {
+    font-size: 1.1rem;
+    color: #5d4037; /* חום כהה ונעים */
+    font-style: italic; /* כתב נטוי לציטוט */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    z-index: 1; /* מוודא שהטקסט מעל המרכאות */
+    position: relative;
+}
+
+.testi-author {
+    display: inline-block;
+    font-weight: 700;
+    color: #e65100;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(0,0,0,0.08); /* קו עדין מפריד */
+    padding-top: 15px;
+    width: 100%;
+}
+
+.testi-from-Pres {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 12px;
+    background-color: #fff3e0; /* רקע כתום בהיר מאוד */
+    color: #e67e22; /* טקסט כתום כהה */
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px; /* פינות עגולות כמו גלולה */
+    border: 1px solid #ffcc80; /* מסגרת עדינה */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* צל עדין */
+    transition: all 0.3s ease;
+}
+
+/* ========================================= */
+/* התאמה למובייל (Mobile)        */
+/* ========================================= */
+
+@media (max-width: 900px) {
+    .about-top-section {
+        flex-direction: column; /* הופך לעמודה אחת */
+        text-align: center;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .about-image-container {
+        max-width: 100%; /* התמונה תופסת רוחב מלא */
+        margin-bottom: 1rem;
+    }
+    
+    .about-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-title::after {
+        margin: 10px auto 0; /* ממרכז את הקו מתחת לכותרת */
+    }
+
+    .about-description {
+        font-size: 1.1rem;
+        text-align: right; /* מחזיר את הטקסט לימין כדי שיהיה קריא */
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* טור אחד של המלצות */
+        gap: 20px;
+    }
+    
+    .testimonial-mini-card {
+        padding: 2rem 1.5rem;
+    }
+}

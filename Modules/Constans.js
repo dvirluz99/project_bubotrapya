@@ -17,6 +17,7 @@ export class ClassesName{
                     static CTA_BUTTON = "cta-button";
                     static CTA_BUTTON_LARGE = 'cta-button-large';
                     static INVITATION_BUTTON = 'invitation-button';
+                    static TESTIMONIAL_MINI_CARD = 'testimonial-mini-card';
 }
 
 export class Route{

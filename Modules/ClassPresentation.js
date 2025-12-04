@@ -1,4 +1,4 @@
-import {homePageStructure, showData, recommendationsData} from "./Presentations.js";
+import {homePageStructure, showData, recommendationsData} from "./presentations.js";
 
 export class Presentations{
   #araayPresentation;

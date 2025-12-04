@@ -43,6 +43,11 @@ export class App{
             this.navigate(id, 'collection');
         }else if (path === 'contact') {
             this.navigate(null, 'contact');
+        }else if (path.startsWith('recommendation/')) {
+            const id = path.split('/')[1];
+            this.navigate(id, 'recommendation'); 
+            // --------------------
+
         } else {
             this.navigate(null, 'home');
         }
@@ -57,6 +62,10 @@ export class App{
         this.#Ui.renderAllPresentation(collection); // נצטרך פונקציית רינדור חדשה לאוסף
     } else if (type === 'contact') {
         this.#Ui.renderPageContactUs();
+    }else if (type === 'recommendation') {
+        const arrData = this.#ClassPresentation.getRecommendationById(id); 
+        this.#Ui.renderRecommendationsPage(arrData);
+
     } else {
         this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
     }
@@ -92,6 +101,18 @@ export class App{
             if(homePage){
                 history.pushState({ page: 'home' }, '', `#home`);
                 this.#Ui.renderAllPresentation(this.#ClassPresentation.getAllProductsForHome());
+            }
+
+            const recLink = event.target.closest(`.${ClassesName.CTA_BUTTON}`); // נניח שיש כפתור כזה
+            if (recLink) {
+                const recId = recLink.dataset.id;
+                if(recId){
+                    history.pushState({ page: 'recommendation', id: recId }, '', `#recommendation/${recId}`); 
+                // 2. ניווט
+                    this.navigate(recId, 'recommendation');
+                }
+                // 1. עדכון ה-URL
+                
             }
 
             const about = event.target.closest(`.${ClassesName.ABOUT}`);

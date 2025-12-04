@@ -34,6 +34,10 @@ export class Ui{
         div.className = ClassesName.DIV_CARD;
         div.setAttribute("data-id", dataId);
 
+        if (element.importance) {
+            div.classList.add(`importance-${element.importance}`);
+        }
+
         const figure = document.createElement("figure");
         figure.setAttribute("data-id", dataId);
         
@@ -45,6 +49,9 @@ export class Ui{
         const figcaption = document.createElement("figcaption");
         figcaption.textContent = element.title;
         figcaption.setAttribute("data-id", dataId);
+        if (element.importance === 'recommended') {
+            figcaption.classList.add('caption-highlight');
+        }
 
         figure.appendChild(img);
         figure.appendChild(figcaption);
@@ -119,8 +126,11 @@ renderOnePresentation(presentation) {
             </div>
             <p class="audience-highlight">${presentation.showData.audience}</p>
             <div class="cta-container">
-                <a href="tel:${presentation.showData.phone}" class="cta-button">
-                    להזמנות והמלצות
+                <a  class="cta-button" data-id ="${presentation.id}">
+                    להמלצות
+                </a>
+                <a  class="invitation-button ${ClassesName.CONTACT_US}" data-id ="${presentation.linkRec}">
+                    להזמנה
                 </a>
             </div>
             <div class="social-proof">
@@ -187,4 +197,75 @@ renderOnePresentation(presentation) {
 
             </div> </div>`;
     }
+
+    renderRecommendationsPage(recommendationsArray) {
+    this.#mainContiner.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    // 1. עוטף ראשי לדף ההמלצות
+    const wrapper = document.createElement("div");
+    wrapper.className = "recommendation-page-wrapper";
+
+    // 2. כותרת ראשית לדף
+    const pageHeader = document.createElement("h2");
+    pageHeader.className = "recommendation-header";
+    pageHeader.textContent = "המלצות חמות";
+    wrapper.appendChild(pageHeader);
+
+    // 3. מיכל (Container) שבו יערמו כל כרטיסי ההמלצה
+    const cardsContainer = document.createElement("div");
+    cardsContainer.className = "recommendations-list-container";
+    
+    // סגנון CSS מקומי לסידור הכרטיסים (אפשר להעביר לקובץ CSS)
+    cardsContainer.style.display = "flex";
+    cardsContainer.style.flexDirection = "column";
+    cardsContainer.style.gap = "2rem"; // רווח בין המלצה להמלצה
+
+    // 4. לולאה שבונה כרטיס לכל המלצה במערך
+    recommendationsArray.forEach(recData => {
+        
+        const card = document.createElement("div");
+        card.className = "recommendation-card-full"; // שימוש באותו קלאס מעוצב שיצרנו קודם
+
+        card.innerHTML = `
+            <div class="rec-meta">
+                <span class="rec-role">
+                    <strong>${recData.recommenderName}</strong>
+                    <br>
+                    <span style="font-size: 0.9em; color: #666;">${recData.recommenderRole}</span>
+                </span>
+                <span class="rec-date">${recData.date}</span>
+            </div>
+            
+            <div class="rec-content">
+                ${recData.content}
+            </div>
+
+            <div class="rec-footer">
+                <p><strong>מתייחס להצגה:</strong> ${recData.relatedShow}</p>
+            </div>
+        `;
+
+        cardsContainer.appendChild(card);
+    });
+
+    wrapper.appendChild(cardsContainer);
+
+    // 5. כפתור הנעה לפעולה כללי בתחתית העמוד
+    const ctaDiv = document.createElement("div");
+    ctaDiv.className = "rec-cta-container";
+    ctaDiv.style.marginTop = "3rem";
+    
+    const contactBtn = document.createElement("button");
+    contactBtn.className = "cta-button-large";
+    contactBtn.classList.add(`${ClassesName.CONTACT_US}`); // כדי שה-Listener הראשי יתפוס אותו ויעביר לצור קשר
+    contactBtn.textContent = `להזמנת הצגה / סדנא צרו קשר`;
+    
+    ctaDiv.appendChild(contactBtn);
+    wrapper.appendChild(ctaDiv);
+
+    this.#mainContiner.appendChild(wrapper);
+}
+
+    
 }

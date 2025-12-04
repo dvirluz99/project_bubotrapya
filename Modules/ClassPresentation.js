@@ -1,4 +1,4 @@
-import { arrayPresentations , homePageStructure, showData} from "./presentations.js";
+import {homePageStructure, showData, recommendationsData} from "./presentations.js";
 
 export class Presentations{
   #araayPresentation;
@@ -36,4 +36,13 @@ export class Presentations{
     return product;
   }
 
+  getRecommendationById(id){
+    const arrRec = [];
+    arrRec.forEach
+    showData[id].linkRec.forEach((idRec)=>{
+      arrRec.push(recommendationsData[idRec]);
+    })
+
+    return arrRec; 
+    }
 }

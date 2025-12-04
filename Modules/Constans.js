@@ -13,7 +13,10 @@ export class ClassesName{
                     static HOME_PAGE = "home_page";
                     static ABOUT = "about";
                     static CONTACT_US = "contact_us";
-                    static IMG_FOR_CARD = "img_for_card"
+                    static IMG_FOR_CARD = "img_for_card";
+                    static CTA_BUTTON = "cta-button";
+                    static CTA_BUTTON_LARGE = 'cta-button-large';
+                    static INVITATION_BUTTON = 'invitation-button';
 }
 
 export class Route{

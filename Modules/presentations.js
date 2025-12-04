@@ -1,172 +1,4 @@
 
-export const arrayPresentations = [
-                            {
-                                name: "את אחי אנכי מבקש",
-                                id: "p1",
-                                mainImg: "AllDir/את אחי אנכי מבקש/et_ahay_anochy.jpg",
-                                showData: {
-                                    title: "את אחי אנכי מבקש",
-                                    description: "זו הצגה חדשה ומרגשת על רקע מסך הברזל ותקומתה של מדינת ישראל. זהו סיפורם האמיתי של שני אחים יום ואהרון שהוריהם נרצחו בשואה. יוספ הצליח לעלות לארץת בעוד אהרון הוגלה לסיביר ונידון לעשר שנות עבודת פרך. יוסף הפך עולמות כדי לחלץ את אחיו מהשבי",
-                                    creatorIntro: " ההצגה מלווה במצגת מרגשת וב תיאטרון בובות רגשי-חברתי ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לכל הציבור ולכל הגילאים!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה  בכמה מוסדות חינוך '"
-                                },
-                                vidue: {
-                                    Trailer: [`<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/7bcTavMpMZM?si=Hu5PlHwgkJYKzE7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`],
-                                },
-                                arrayGallery: [
-                                            {img:"AllDir/את אחי אנכי מבקש/image1.jpg"},
-                                            {img:"AllDir/את אחי אנכי מבקש/image2.jpg"},
-                                            {img:"AllDir/את אחי אנכי מבקש/image3.jpg"},
-                                            {img:"AllDir/תמונות כלליות והוספות/image7.jpg"}
-                                ],
-                            },
-                            {
-                                name: "חוהלה משואה לתקומה",
-                                id: "p2",
-                                mainImg: "AllDir/חוהלה משואה לתקומה/huale_shoah_tkuma.jpg",
-                                showData: {
-                                    title: "חוהלה – משואה לתקומה",
-                                    description: "סיפורה האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שבל משפחתו נרצחה בשואה. זהו סיפור על אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת מרגשת.",
-                                    creatorIntro: "ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לנשים ונערות בכל גיל!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
-                                    },
-                                vidue: {
-                                    Trailer:[ `<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/7bcTavMpMZM?si=Hu5PlHwgkJYKzE7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-                                              `<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/iHc3BcP99hY?si=szGNnb8lH4wRzyy_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-                                    ]
-                                },
-                                arrayGallery: [
-                                            {img:"AllDir/חוהלה משואה לתקומה/image1.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image2.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image3.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image4.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image5.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image6.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image7.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image8.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image9.jpeg",},
-                                            {img:"AllDir/חוהלה משואה לתקומה/image10.jpeg",},
-                                ],
-                            },
-                            {
-                                name: "הצגות והרצאות לבני נוער - לילה לבן",
-                                id: "p3",
-                                mainImg: "AllDir/הצגות והרצאות לבני נוער/potho_for_gift.jpg",
-                                showData: {
-                                    title: "חוהלה – משואה לתקומה",
-                                    description: "סיפורה האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שבל משפחתו נרצחה בשואה. זהו סיפור על אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת מרגשת.",
-                                    creatorIntro: "ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לנשים ונערות בכל גיל!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
-                                },
-                                arrayGallery: [
-                                            
-                                ],
-                            },
-                            {
-                                name: "הצגות לילדים",
-                                id: "p4",
-                                mainImg: "AllDir/הצגות לילדים/potho_for_gift_yeladim.jpg",
-                                showData: {
-                                    title: "חוהלה – משואה לתקומה",
-                                    description: "סיפורה האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שבל משפחתו נרצחה בשואה. זהו סיפור על אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת מרגשת.",
-                                    creatorIntro: "ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לנשים ונערות בכל גיל!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
-                                },
-                            },
-                            {
-                                name: "סדנאות בובהתרפיה לגיל השלישי",
-                                id: "p5",
-                                mainImg: "AllDir/סדנאות לגיל השלישי/potho_for_gift_gil_ashlyshi.jpeg",
-                                showData: {
-                                    title: "חוהלה – משואה לתקומה",
-                                    description: "סיפורה האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שבל משפחתו נרצחה בשואה. זהו סיפור על אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת מרגשת.",
-                                    creatorIntro: "ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לנשים ונערות בכל גיל!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
-                                },
-                                arrayGallery: [
-                                            
-                                ],
-                            },
-                            {
-                                name: "סדנאות בובהתרפיה לבעלי צרכים מיוחדים",
-                                id: "p6",
-                                mainImg: "AllDir/הצגות והרצאות לבני נוער/potho_for_gift.jpg",
-                                showData: {
-                                    title: "חוהלה – משואה לתקומה",
-                                    description: "סיפורה האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שבל משפחתו נרצחה בשואה. זהו סיפור על אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת מרגשת.",
-                                    creatorIntro: "ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לנשים ונערות בכל גיל!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
-                                },
-                                arrayGallery: [
-                                            
-                                ],
-                            },
-                            {
-                                name: "סדנאות בובהתרפיה לגננות ולצוותי גיל ברך",
-                                id:"p7",
-                                mainImg: "AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל ברך/logo_gor_gananot_gil_arach.jpg",
-                                showData: {
-                                    title: "חוהלה – משואה לתקומה",
-                                    description: "סיפורה האמיתי, המופלא והמרגש של חוהלה ובעלה זלמן, שבל משפחתו נרצחה בשואה. זהו סיפור על אמונה ותקוה, המובא לקהל בעזרת בובות תיאטרון ומצגת מרגשת.",
-                                    creatorIntro: "ההצגה מועברת ע\"י נכדתם,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים לנשים ונערות בכל גיל!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה במועדון עמך לניצולי שואה... החל מכיתה ד'"
-                                },
-                                arrayGallery: [
-                                            
-                                ],
-                            },
-                            {
-                                name: "סדנאות בובהתרפיה להורים לילדי גנים ובתי ספר",
-                                id:"p8",
-                                mainImg: "AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/logo_for_orym_leyeladim.jpg",
-                                showData: {
-                                    title: "נעם עולה לכיתה א'",
-                                    description: "נעם מתרגש וחושש . אמא מנסה לעודד אותו ואז הוא פוגש את חבריו התוכי, הכלב, הכבשה והצב. כל חיה עוזרת לנעם להתגבר על החששות בעזרת עצות וחשיבה חיובית",
-                                    creatorIntro: "ההצגה מועברת ע\"י,",
-                                    creatorName: "רונית לוז",
-                                    creatorCredentials: "יועצת חינוכית, מטפלת CBT, ויוצרת תיאטרונית – תיאטרון בובות רגשי-חברתי.",
-                                    audience: "מתאים להורים לילדי גנים ובתי ספר!",
-                                    phone: "0542043429",
-                                    socialProof: "ההצגה הועברה בשלל בתי ספר"
-                                },
-                                vidue: {
-                                    Trailer: `<iframe class= "vidue_iframe" src="https://www.youtube.com/embed/97jA2ir7Uu0?si=6BeQhyEy45mQ9W9v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-                                },
-                                arrayGallery: [
-                                           {img:"AllDir/חוהלה משואה לתקומה/image1.jpeg",}, 
-                                ],
-                            },
-                            
-];
-
 export const homePageStructure = [
     {
         id: "card_1",
@@ -178,6 +10,7 @@ export const homePageStructure = [
     {
         id: "card_2",
         type: "single",
+        importance: 'recommended',
         mainImg: "AllDir/חוהלה משואה לתקומה/huale_shoah_tkuma.jpg",
         title: "חוהלה משואה לתקומה",
         linkedShowId: "p2"
@@ -251,6 +84,8 @@ export const showData = {
         title: "את אחי אנכי מבקש",
         id: "p1",
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: "AllDir/את אחי אנכי מבקש/et_ahay_anochy.jpg",
         showData: {
             title: "את אחי אנכי מבקש",
@@ -277,6 +112,8 @@ export const showData = {
         title: "חוהלה משואה לתקומה",
         id: "p2",
         type: 'single',
+        linkRec: ['rec3', 'rec4', 'rec5', 'rec6', 'rec7'],
+        importance: 'recommended',
         mainImg: "AllDir/חוהלה משואה לתקומה/huale_shoah_tkuma.jpg",
         showData: {
             title: "חוהלה – משואה לתקומה",
@@ -310,6 +147,8 @@ export const showData = {
         title: 'נעם עולה לכיתה א',
         id: 'p3',
         type: 'single',
+        linkRec: ['rec2'],
+        importance: 'accustomed',
         mainImg: 'AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/נעם עולה לכיתה א/logo_noam_ole_cita.jpg',
         showData: {
             title: "נעם עולה לכיתה א'",
@@ -330,12 +169,16 @@ export const showData = {
              {img:'AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/נעם עולה לכיתה א/imge1.jpg'},
              {img:'AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/נעם עולה לכיתה א/imge2.jpg'},
              {img:'AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/נעם עולה לכיתה א/imge3.jpg'},
+             {img:'AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/imge1.jpg'},
+             {img:'AllDir/סדנאות והרצאות להורים לילדי גנים ובתי ספר/imge2.jpg'},
         ]
         },
     p4:{
        title: 'המפתח מתחת לכרית',
        id: 'p4',
        type: 'single',
+       linkRec: [],
+       importance: 'accustomed',
        mainImg: 'AllDir/הצגות לילדים/המפתח מתחת לכרית/logo_for_hmaftech.jpg',
        showData: {
             title: 'המפתח מתחת לכרית',
@@ -356,6 +199,8 @@ export const showData = {
         title: 'יוסף מוקיר שבת',
         id: 'p5',
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: 'AllDir/הצגות לילדים/יוסף מוקיר שבת/yosef_mokir_shabat.jpg',
         showData: {
             title: 'יוסף מוקיר שבת',
@@ -376,6 +221,8 @@ export const showData = {
         title: 'כוחה של מילה',
         id: 'p6',
         type: 'single',
+        linkRec: ['rec1'],
+        importance: 'accustomed',
         mainImg: 'AllDir/הצגות לילדים/כוחה של מילה/logo_for_cocha_shel.jpg',
         showData: {
             title: 'כוחה של מילה',
@@ -394,6 +241,8 @@ export const showData = {
         title: 'לקראת ימי התשובה',
         id: 'p7',
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: 'AllDir/הצגות לילדים/לקראת ימי התשובה/logo_for_likrat_yema.jpg',
         showData: {
             title: 'לקראת ימי התשובה',
@@ -412,6 +261,8 @@ export const showData = {
         title: 'עולה חדשה',
         id: 'p8',
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: 'AllDir/הצגות לילדים/עולה חדשה/logo_ola_chadasha.jpg',
         showData: {
             title: 'עולה חדשה',
@@ -430,6 +281,8 @@ export const showData = {
         title: 'קמצא ובר קמצא',
         id: 'p9',
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: 'AllDir/הצגות לילדים/קמצא ובר קמצא/logo_kamza.jpg',
         showData: {
             title: 'קמצא ובר קמצא',
@@ -448,6 +301,8 @@ export const showData = {
         title: 'כשהלבבות נפגשים',
         id: 'p10',
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: 'AllDir/סדנאות לגיל השלישי/כשהלבבות נפגשים/logo_for_hlevavot.jpg',
         showData: {
             title: 'כשהלבבות נפגשים',
@@ -466,6 +321,8 @@ export const showData = {
         title: 'אל תשליכני לעת זקנה',
         id: 'p11',
         type: 'single',
+        linkRec: [],
+        importance: 'accustomed',
         mainImg: 'AllDir/סדנאות לגיל השלישי/logo_for_al_tashlicheny.jpg',
         showData: {
             title: 'אל תשליכני לעת זקנה',
@@ -484,6 +341,8 @@ export const showData = {
         title: 'הגיל השלישי עם הפנים קדימה',
         id: 'p12',
         type: 'single',
+        linkRec: ['rec9', 'rec10', 'rec11'],
+        importance: 'accustomed',
         mainImg: 'AllDir/סדנאות לגיל השלישי/logo_for_him_hapanim_kadima.jpg',
         showData: {
             title: 'הגיל השלישי עם הפנים קדימה',
@@ -499,13 +358,15 @@ export const showData = {
         arrayGallery: [
             {img: 'AllDir/סדנאות לגיל השלישי/imge1.JPG'},
             {img: 'AllDir/סדנאות לגיל השלישי/imge2.JPG'},
-            {img: 'AllDir/סדנאות לגיל השלישי/imge3.JPG'},
+            {img: 'AllDir/סדנאות לגיל השלישי/imge3.png'},
         ],
         },
     p13:{
         title: 'השתלמות חוויתית ופרקטית לגננות ומורות',
         id: 'p13',
         type: 'single',
+        linkRec: ['rec8'],
+        importance: 'accustomed',
         mainImg: 'AllDir/סדנאות בובהתרפיה לגננות ולצוותי גיל הרך/logo_gor_gananot_gil_arach.jpg',
         showData: {
             title: 'השתלמות חוויתית ופרקטית לגננות ומורות',
@@ -529,3 +390,214 @@ export const showData = {
         ],
         },
 }
+
+
+
+export const recommendationsData = {
+    rec1: {
+        id: "rec1",
+        type: "recommendation", // סוג ייחודי
+        recommenderName: "טובה שץ",
+        recommenderRole: "מנהלת גני ילדים, מועצה אזורית נחל שורק",
+        date: "17.12.2024",
+        relatedShow: "כוחה של מילה",
+        // התוכן המלא של ההמלצה (כולל פסקאות)
+        content: `
+            <p>אני כותבת מכתב זה על מנת להמליץ בחום על רונית לוז עבור הפעלת הצגות וסדנאות בובהתראפיה בגני ילדים.</p>
+            <p>רונית הופיעה לאחרונה בגני הילדים במ.א. נחל שורק עם הצגה מרתקת ומרגשת העוסקת ב"כוחה של מילה". ההצגה, שהועברה ביד אומן, הצליחה לגעת בנושאים רגשיים וחברתיים עמוקים, כגון פחדים, משמעת והתמודדות עם סמכות בצורה עדינה ומותאמת לגיל הרך.</p>
+            <p>הצגת הבובות סיפקה לילדי הגן חוויה ייחודית ומעשירה, שסייעה להם לחקור את רגשותיהם ולהבין אותם טוב יותר. לאחר ההצגה, רונית, יועצת ומטפלת ב-CBT, עבדה עם הילדים בעיבוד הרגשות שעלו, תוך שימוש בטכניקות התנהגותיות קוגניטיביות. רונית שיתפה את הצוותים החינוכיים שהמשיכו בתהליך.</p>
+            <p>התרשמתי מאוד מהמקצועיות, הרגישות והיצירתיות של רונית לוז ומהבובות המושקעות. אני ממליצה בחום על רונית לוז לכל מי שמחפש פעילות חינוכית וטיפולית ייחודית ויעילה עבור ילדים.</p>
+        `,
+        contactInfo: "08-8594172",
+        // קישור להצגה הרלוונטית (כדי שיוכלו להזמין אותה משם)
+        linkedShowId: "p6" 
+    },
+    rec2: {
+        id: "rec2",
+        type: "recommendation",
+        recommenderName: "רותם בר",
+        recommenderRole: "בשם צוות ביה\"ס חמ\"ד \"מתתיהו\", מושב צלפון",
+        date: "05.01.2025",
+        relatedShow: "נעם עולה לכיתה א'",
+        
+        // תוכן ההמלצה כפי שחולץ מהמסמך
+        content: `
+            <p>ההצגה "נועם עולה לכיתה א'" היתה פשוט מקסימה!! הילדים וההורים נהנו כל כך! היו רגעים של צחוק עד דמעות, לצד דמעות של התרגשות.</p>
+            <p>הילדים קיבלו "אישור" לתחושות שלהם בנוגע לעליה לכיתה א' - זה בסדר שאני גם שמח וגם מפחד, וגם קיבלו עצות ופתרונות לתחושות הללו.</p>
+            <p>הבובות היו יפות, מצחיקות ומקרבות מסר של הרגעה וחיבוק.</p>
+            <p>אנחנו ממליצות בחום על ההצגה לילדי גן חובה ולימים פתוחים בבתי ספר.</p>
+        `,
+        
+        contactInfo: "", // לא צוין טלפון במכתב
+        linkedShowId: "p3" // שיניתי ל-p3 כי זה ה-ID של "נעם עולה לכיתה א'" בקובץ שלך
+    },
+    rec3: {
+        id: "rec3",
+        type: "recommendation",
+        recommenderName: "אודליה אמסלם",
+        recommenderRole: "רכזת חברתית, אולפנת אבן שמואל",
+        date: "09.01.2025",
+        relatedShow: "חוהלה – משואה לתקומה", // מבוסס על התוכן (סיפור משפחתי, שואה)
+        
+        // תוכן ההמלצה מסודר לפי פסקאות
+        content: `
+            <p>כהכנה ליום הקדיש הכללי הזמנו את רונית לשיתוף בסיפור המשפחתי. המפגש נפתח בהצגת תיאטרון בובות והמשיך בהקרנת תמונות מהאלבום המשפחתי.</p>
+            <p>העברת הסיפור בעזרת הבובות הייתה מוחשית מאוד ומרגשת עד דמעות.</p>
+            <p>השימוש בבובות מקטין את המשמעות העצומה והמאיימת של השואה ומחבר אותה יותר לחיי היום-יום של הבנות. תודה שזיכית אותנו בסיפור המשפחתי.</p>
+            <p>ממליצה בחום!</p>
+        `,
+        
+        contactInfo: "", // לא צוין מספר טלפון במכתב
+        linkedShowId: "p2" // מזהה ההצגה "חוהלה משואה לתקומה" (לפי הקבצים הקודמים)
+    },
+    rec4: {
+        id: "rec4",
+        type: "recommendation",
+        recommenderName: "נורית ראובן",
+        recommenderRole: "מנהלת בי\"ס ברויאר בנות, יד בנימין",
+        date: "ניסן תשפ\"ד",
+        relatedShow: "חווהל'ה - משואה לתקומה",
+        
+        // תוכן ההמלצה מתוך המסמך
+        content: `
+            <p>ברצוני להמליץ על ההצגה "חווהל'ה - משואה לתקומה". רונית לוז העבירה את ההצגה בבית ספרנו לתלמידות כיתות ד'-ה' ביום הזיכרון לשואה ולגבורה.</p>
+            <p>ההצגה מספרת את סיפור הצלתה של סבתה של רונית באמצעות דיאלוג בין בובות המייצגות דמויות במשפחה. הועברו ערכים של אמונה, סבלנות והתמודדות עם קושי.</p>
+            <p>השימוש בבובות ריכך את התכנים הקשים של השואה והפך את הסיפור לחי, דינמי ומותאם לגיל יסודי, כך שהבנות יצאו עם תחושת אופטימיות ואמונה.</p>
+            <p>מומלץ לכל המעוניין להנגיש את נושא השואה לילדים בצורה קרובה ומותאמת.</p>
+        `,
+        
+        contactInfo: "", 
+        linkedShowId: "p2" // מקושר גם להצגה "חוהלה" (p2)
+    },
+    rec5: {
+        id: "rec5",
+        type: "recommendation",
+        recommenderName: "דבורה כהן",
+        recommenderRole: "מנהלת חטיבת הביניים, אולפנת צביה חפץ חיים",
+        date: "09.07.2024",
+        relatedShow: "חווהל'ה – משואה לתקומה",
+        
+        // תוכן ההמלצה מתוך המסמך
+        content: `
+            <p>המלצה על המופע "חווהל'ה - משואה לתקומה". רונית העבירה שיחה מדהימה ומרגשת לשכבות ז'-ח' באולפנה.</p>
+            <p>רונית מצליחה בכישרונה לחבר את הבנות לנושא השואה הן דרך הסיפור האישי והן דרך חיבור רגשי לילדה בתקופת השואה, המקביל לחוויות של נערות בגיל ההתבגרות.</p>
+            <p>המופע משלב גיוון של מצגת, בובות ושיח, ומעניק לבנות כלים להתמודדות רגשית וחברתית.</p>
+            <p>ההצגה הייתה משמעותית מאוד עבור הבנות, ואני בטוחה שרונית תהיה משמעותית לכל מוסד שיזמין אותה.</p>
+        `,
+        
+        contactInfo: "08-8593825", 
+        linkedShowId: "p2" // מקושר גם להצגה "חוהלה" (p2)
+    },
+    rec6: {
+        id: "rec6",
+        type: "recommendation",
+        recommenderName: "תמי חיות",
+        recommenderRole: "עו\"ס פסיכותרפיסטית, מנהלת מועדון עמך רחובות",
+        date: "יוני 2024",
+        relatedShow: "חווהל'ה – משואה לתקומה",
+        
+        // תוכן ההמלצה מתוך המסמך
+        content: `
+            <p>המלצה חמה על מופע תיאטרון הבובות "חוהלה משואה לתקומה". רונית הופיעה במועדון עמך לשורדי שואה ברחובות בפני כ-50 שורדים, אנשי צוות וחברי קבוצת התיאטרון.</p>
+            <p>רונית העבירה את סיפור הישרדותם של סבה וסבתה בצורה מרתקת, סוחפת ונוגעת ללב, אשר ריגשה את הקהל עד דמעות.</p>
+            <p>השימוש בבובות מיוחדות ומרהיבות, יחד עם כישורי משחק וקול ייחודיים, אפשר לצופים להתחבר לסיפור ההיסטורי ולמצוא בו את עצמם.</p>
+            <p>המופע מתאים הן לילדים והן לבני הגיל השלישי, ומהווה דרך ייחודית וחווייתית לשימור זיכרון השואה.</p>
+        `,
+        
+        contactInfo: "", 
+        linkedShowId: "p2" // מקושר גם להצגה "חוהלה" (p2)
+    },
+    rec7: {
+        id: "rec7",
+        type: "recommendation",
+        recommenderName: "הדר אסחייק",
+        recommenderRole: "רכזת חברתית, ת\"ת ובי\"ס ממ\"ד תורני כפר דרום",
+        date: "י\"ג אייר התשפ\"ד",
+        relatedShow: "חווהל'ה – משואה לתקומה",
+        
+        // תוכן ההמלצה מתוך המסמך
+        content: `
+            <p>המלצה על המופע "חווהל'ה - משואה לתקומה". רונית לוז הציגה את סיפור הצלתה של סבתה בבית ספרנו לבנות כיתות ד'-ו'.</p>
+            <p>הסיפור סופר באמצעות בובות תיאטרון, אשר סייעו לעדן את קשיי הסיפור ולהעביר מסרים חשובים של התמודדות עם קשיים מתוך אמונה וייחודיות יהודית באופן ברור.</p>
+            <p>האווירה הייתה נעימה, עם הקשבה מלאה ושיתוף פעולה מצד הבנות, כולל שאלות בסיום.</p>
+            <p>אנו מודים לרונית על סיפור מיוחד, אמוני ומחזק, וממליצים להזמין אותה להופיע, במיוחד בימי ההכנה "משואה לתקומה".</p>
+        `,
+        
+        contactInfo: "", 
+        linkedShowId: "p2" // מקושר גם להצגה "חוהלה" (p2)
+    },
+    rec8: {
+        id: "rec8",
+        type: "recommendation",
+        recommenderName: "ציפי ברגמן",
+        recommenderRole: "מנהלת הגיל הרך, קיבוץ צרעה",
+        date: "31.10.2025",
+        relatedShow: "הצגה לילדים + השתלמות צוות",
+        
+        content: `
+            <p>אני מבקשת להמליץ על רונית לוז להעברת הצגות וכן השתלמויות לצוותים. רונית העבירה לנו הצגה לילדי הגנים (גילאי 3-6) שהייתה ברמה גבוהה מאוד ומותאמת לגיל, ונגעה בנושאים רגשיים מורכבים (כעס, עלבון ופחד) בצורה עדינה שאפשרה שיח רגשי.</p>
+            <p>בעקבות ההצגה, הזמנו את רונית להעביר השתלמות לצוות החינוכי. ההשתלמות כללה רקע תיאורטי, טכניקות להפעלת בובות וסדנא מעשית ליצירת "בובות חוסן".</p>
+            <p>השימוש בבובות ככלי לחיזוק החוסן הרגשי נמצא יעיל מאוד במערכת הגיל הרך. רונית שידרגה את מקצועיות הצוותים באופן ניכר.</p>
+            <p>אחת המחנכות שיתפה: "היה מרתק ומדהים... אחת ההרצאות הטובות והיעילות ששמעתי".</p>
+        `,
+        
+        contactInfo: "02-9908230",
+        linkedShowId: "p13" // מקושר להשתלמות לגננות
+    },
+    rec9: {
+        id: "rec9",
+        type: "recommendation",
+        recommenderName: "אהובה פלאוט",
+        recommenderRole: "בשם נשות 55 פלוס, מושב בית חלקיה",
+        date: "", // תאריך לא מצוין
+        relatedShow: "הגיל השלישי עם הפנים קדימה",
+        
+        // תוכן ההמלצה מאהובה פלאוט
+        content: `
+            <p>הייתה לי הזכות להזמין את רונית להעביר סדנא עם ההצגה "הגיל השלישי עם הפנים קדימה" לנשות 55 פלוס.</p>
+            <p>נהנינו מאוד מההומור השזור בהצגה ומהרמה המקצועית הגבוהה, הן של ההצגה והן של השיח שהתפתח בעקבותיה.</p>
+            <p>המופע נוגע בנקודות משמעותיות בחיי בני ובנות הגיל השלישי והסובבים אותם. אישיותה הנעימה והכובשת של רונית הפכה את הערב לבלתי נשכח.</p>
+        `,
+        
+        contactInfo: "",
+        linkedShowId: "p12" // מקושר להצגה: הגיל השלישי עם הפנים קדימה
+    },
+    // ----------------------------------------------------
+
+    rec10: {
+        id: "rec10",
+        type: "recommendation",
+        recommenderName: "עדי כהנא",
+        recommenderRole: "תושבת יד בנימין",
+        date: "", // תאריך לא מצוין
+        relatedShow: "הגיל השלישי עם הפנים קדימה",
+        
+        // תוכן ההמלצה מעדי כהנא
+        content: `
+            <p>ההפעלה של רונית לוז היא שילוב מדהים של חוויה וחכמת חיים. רונית מצליחה להביע דרך משחק ותיאטרון בובות את ההתמודדויות של הגיל השלישי.</p>
+            <p>הכול נעשה בחינניות, כבוד, הומור ודרמה. נהניתי מאוד כצופה.</p>
+        `,
+        
+        contactInfo: "", 
+        linkedShowId: "p12" // מקושר להצגה: הגיל השלישי עם הפנים קדימה
+    },
+
+    rec11: {
+        id: "rec11",
+        type: "recommendation",
+        recommenderName: "נחמה ספרא",
+        recommenderRole: "משתתפת סדנא (עדות אישית)",
+        date: "", // תאריך לא מצוין (צוין "אתמול.בערב")
+        relatedShow: "הגיל השלישי עם הפנים קדימה",
+        
+        // תוכן ההמלצה מנחמה ספרא
+        content: `
+            <p>אתמול בערב הייתה לנו חוויה מהנה במיוחד. הגב' רונית לוז העבירה סדנה בליווי בובות תיאטרון גדולות שנתפרו במיוחד לסדנא.</p>
+            <p>הנושא היה סיטואציות מהחיים בגיל השלישי. הדו שיח שהתפתח בין הקהל לרונית היה מחזק, מצחיק ונתן כוח להמשיך הלאה.</p>
+            <p>אני ממליצה בחום על רונית והפעילות שלה. בטוחני שתיהנו.</p>
+        `,
+        
+        contactInfo: "", 
+        linkedShowId: "p12" // מקושר להצגה: הגיל השלישי עם הפנים קדימה
+    }
+};

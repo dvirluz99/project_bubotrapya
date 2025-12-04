@@ -131,6 +131,37 @@ footer div{
     color: inherit;
 }
 
+/* --- העיצוב המיוחד למומלצים --- */
+.caption-highlight {
+    /* 1. שינוי הרקע לצבע בולט (גרדיאנט כתום/זהב) */
+    background: linear-gradient(to bottom, #fff8e1, #ffecb3); 
+    color: #e65100; /* טקסט בצבע כתום חזק */
+    position: relative; /* חובה! כדי שנוכל למקם את התווית ביחס אליו */
+    
+    /* מוסיפים קצת מקום למעלה בשביל התווית */
+    margin-top: 15px; 
+    border-top: 2px solid #ffcc80;
+}
+
+/* הוספת הטקסט "ההצגה המועברת ביותר" */
+.caption-highlight::before {
+    content: "ההצגה המועברת ביותר! 🎖️"; /* הטקסט שרצית */
+    
+    /* מיקום ועיצוב התווית */
+    position: absolute;
+    top: -14px; /* מעלה את זה קצת מעל הכותרת */
+    left: 50%;
+    transform: translateX(-50%); /* ממרכז את זה בול */
+    
+    background-color: #f5b95a; /* רקע אדום-כתום כהה לתווית */
+    color: white; /* טקסט לבן */
+    font-size: 0.75rem;
+    padding: 2px 12px;
+    border-radius: 10px; /* הופך את זה ל"גלולה" */
+    white-space: nowrap; /* מונע שבירת שורות */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* צל קטן */
+}
+
 .div_presentation{
     display: grid;
     place-items: center;
@@ -481,6 +512,23 @@ figcaption {
     transform: translateY(-2px); /* אפקט ריחוף קטן */
     box-shadow: 0 6px 15px rgba(255, 153, 51, 0.5);
 }
+.invitation-button {
+    display: inline-block; /* מאפשר padding ו-margin */
+    background: linear-gradient(135deg, #ff9933, #ffb347); /* גרדיאנט כתום */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none; /* הסרת קו תחתון */
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px; /* כפתור "גלולה" */
+    box-shadow: 0 4px 10px rgba(255, 153, 51, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.invitation-button:hover {
+    transform: translateY(-2px); /* אפקט ריחוף קטן */
+    box-shadow: 0 6px 15px rgba(255, 153, 51, 0.5);
+}
 
 /* --- 6. הוכחה חברתית --- */
 .social-proof {
@@ -513,6 +561,11 @@ figcaption {
     }
 
     .cta-button {
+        padding: 0.7rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .invitation-button{
         padding: 0.7rem 2rem;
         font-size: 1.1rem;
     }
@@ -662,3 +715,135 @@ figcaption {
     font-size: 1.1rem;
 }
 
+/* --- עיצוב דף המלצה מלא --- */
+
+.recommendation-page-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Heebo', sans-serif;
+}
+
+.recommendation-header {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+/* קו דקורטיבי מתחת לכותרת */
+.recommendation-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff9933; /* הצבע הכתום שלך */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.recommendation-card-full {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* צל רך ויוקרתי */
+    position: relative;
+}
+
+/* אייקון ציטוט דקורטיבי */
+.recommendation-card-full::before {
+    content: '"';
+    font-family: serif;
+    font-size: 8rem;
+    color: #f0f4f8; /* צבע כמעט שקוף */
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    z-index: 0;
+}
+
+.rec-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative; /* מעל הציטוט */
+    z-index: 1;
+}
+
+.rec-role {
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.rec-date {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.rec-content {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.rec-content p {
+    margin-bottom: 1rem;
+}
+
+.rec-footer {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #666;
+    border-right: 4px solid #ff9933;
+}
+
+.rec-cta-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.cta-button-large {
+    background: linear-gradient(135deg, #ff9933, #ffb347);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 153, 51, 0.6);
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .recommendation-card-full {
+        padding: 1.5rem;
+    }
+    
+    .rec-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .recommendation-header {
+        font-size: 1.5rem;
+    }
+}
